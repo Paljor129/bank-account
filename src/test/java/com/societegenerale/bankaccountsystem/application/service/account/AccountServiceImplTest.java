@@ -6,6 +6,7 @@ import com.societegenerale.bankaccountsystem.controller.mapper.AccountMapper;
 import com.societegenerale.bankaccountsystem.controller.mapper.ClientMapper;
 import com.societegenerale.bankaccountsystem.domain.entity.Account;
 import com.societegenerale.bankaccountsystem.domain.repository.AccountRepository;
+import com.societegenerale.bankaccountsystem.domain.repository.TransactionRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,6 +26,8 @@ class AccountServiceImplTest {
 
     @MockBean
     private AccountRepository accountRepository;
+    @MockBean
+    private TransactionRepository transactionRepository;
     @MockBean
     private AccountMapper accountMapper;
     @MockBean

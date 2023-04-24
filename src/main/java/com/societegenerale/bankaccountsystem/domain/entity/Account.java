@@ -22,7 +22,7 @@ public class Account extends AbstractBaseEntity {
     @JoinColumn(name = "client_id")
     private Client client;
 
-    @OneToMany(mappedBy = "account", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Transaction> transactions;
 
     public String getAccountNumber() {
